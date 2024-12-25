@@ -14,8 +14,17 @@ const Carousel = ({props}: any) => {
     useEffect(() => {
         let resizeTimer: any;
 
-        const updateSlidesPerView = () => {
-        };
+       const updateSlidesPerView = () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (window.innerWidth > 1300)
+                    setSlidesPerView(3);
+                else if (window.innerWidth >= 768 && window.innerWidth < 1300)
+                    setSlidesPerView(2);
+                else
+                    setSlidesPerView(1);
+            }, 200); 
+        }; 
 
         updateSlidesPerView();
         window.addEventListener('resize', updateSlidesPerView);

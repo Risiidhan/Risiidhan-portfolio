@@ -9,7 +9,7 @@ import About from './About'
 const HomeSection = () => {
     return (
         <div className=''>
-            <div className='content-section px-12'>
+            <div className='content-section px-4 sm:px-12'>
                 <Navbar />
                 <HomeHeroComponent />
                 <Tools />

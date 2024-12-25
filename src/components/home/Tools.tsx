@@ -15,7 +15,7 @@ const Tools = () => {
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
                 className='md:col-span-1 col-span-3 md:order-2 mt-[-20%] order-1 grid place-items-center'>
-                <span className='text-xl sm:text-[50px] mb-10'>
+                <span className='text-2xl sm:text-[50px] mb-10'>
                     Technologies
                 </span>
             </motion.div>

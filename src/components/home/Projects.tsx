@@ -54,7 +54,7 @@ const Projects = () => {
                     viewport={{ once: false, amount: 0.7 }}
                     className='md:col-span-1 col-span-4  grid place-items-center'>
                     <div className='text-[36px] flex flex-col text-center md:text-left'>
-                         <div>
+                         <div className='text-2xl sm:text-[50px]'>
                          Projects
                         </div>
                         <a className='text-sm md:text-md mb-5 underline underline-offset-8  cursor-pointer'

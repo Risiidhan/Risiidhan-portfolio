@@ -17,7 +17,7 @@ const About = () => {
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
             className='sticky z-0 top-[100px] mb-[3rem] h-[400px] text-center'>
-            <span className='text-xl sm:text-[50px] mb-2'>
+            <span className='text-2xl sm:text-[50px] mb-2'>
               Qualification and Experience
             </span>
           </motion.div>
