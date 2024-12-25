@@ -9,7 +9,6 @@ const Projects = () => {
 
     const [cachedRepos, setCachedRepos] = useState([]);
 
-
     const getRepos = async () => {
         try {
             const response = await fetch('https://api.github.com/users/risiidhan/starred', {
