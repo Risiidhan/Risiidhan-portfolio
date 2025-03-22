@@ -6,6 +6,7 @@ import Projects from './Projects'
 import About from './About'
 import AboutTimeline from './AboutTimeline'
 import { Vortex } from '../ui/vortex'
+import Contact from './Contact'
 
 
 const HomeSection = () => {
@@ -26,7 +27,7 @@ const HomeSection = () => {
                 <AboutTimeline />
                 <Projects />
                 {/* <Stats /> */}
-                {/* <Contact /> */}
+                <Contact />
             </div>
         </div>
 

@@ -92,3 +92,22 @@ body {
     transform: translateY(-5px);
   }
 }
+
+.card-container {
+  position: relative;
+  overflow: hidden; /* Ensures glow stays inside */
+}
+
+.card-container::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* Expands border slightly */
+  z-index: -1;
+  border-radius: inherit; /* Matches parent's rounded corners */
+  padding: 2px; /* Controls glow thickness */
+  background: linear-gradient(90deg, #ff0080, #ff6600, #ff0080);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter: blur(8px); /* Creates glow effect */
+}

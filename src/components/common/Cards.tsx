@@ -48,7 +48,8 @@ const Cards = ({ prop }: any) => {
 
     return (
         <>
-            <div ref={cardRef} className="inner-glass-effect !shadow-none px-6 py-3 card-container">
+            <div ref={cardRef} className="border bg-gradient-to-b from-pink-400 via-purple-500 to-blue-500 rounded-2xl !shadow-none px-[0.7px] py-[0.7px] card-container">
+                <div className='bg-[#0f0f0f] w-full h-full rounded-[15px] px-8 py-3'>
                 <div className="flex items-center justify-between py-2">
                     <div className='w-6 h-6 2xl:w-9 2xl:h-9 flex gap-2'>
                     {renderIcons()}
@@ -87,8 +88,7 @@ const Cards = ({ prop }: any) => {
                         </button>
                     )}
                 </div>
-
-
+                </div>
             </div>
         </>
 

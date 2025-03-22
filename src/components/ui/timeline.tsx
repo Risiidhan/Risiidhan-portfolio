@@ -32,15 +32,15 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
         offset: ["start 10%", "end 50%"],
     });
 
-    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height-200]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
     return (
         <div
-            className="w-full rounded-2xl bg-white dark:bg-neutral-950 font-sans md:px-10"
+            className="w-full rounded-2xl bg-white dark:bg-neutral-950 font-sans pb-[60px] md:px-10"
             ref={containerRef}
         >
-            <div className="max-w-7xl mx-auto pt-20 pb-10 px-4 md:px-8 lg:px-10">
+            <div className="max-w-7xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
                 <h2 className="text-xl md:text-3xl mb-4 text-black dark:text-white max-w-4xl">
                     {bodyTitle}
                 </h2>
@@ -49,7 +49,7 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
                 </p>
             </div>
 
-            <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+            <div ref={ref} className="relative max-w-7xl mx-auto pb-[7rem]">
                 {data.map((item, index) => (
                     <div
                         key={index}
@@ -89,6 +89,7 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
                     <motion.div
                         style={{
                             height: heightTransform,
+                            maxHeight: height + "px",
                             opacity: opacityTransform,
                         }}
                         className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"

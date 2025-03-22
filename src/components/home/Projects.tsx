@@ -11,18 +11,11 @@ const Projects = () => {
 
     const getRepos = async () => {
         try {
-            const response = await fetch('https://api.github.com/users/risiidhan/starred', {
-                headers: {
-                    Authorization: `token ${process.env.NEXT_PUBLIC_API_KEY}`,
-                },
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                return data
-            } else {
-                console.log('Error fetching repositories:', response.statusText);
-            }
+            const response = await fetch('/api/github');
+        if (!response.ok) {
+            throw new Error("Failed to fetch repositories");
+        }
+        return await response.json();
         } catch (error) {
             console.log('Error fetching repositories:', error);
         }
@@ -52,11 +45,11 @@ const Projects = () => {
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.7 }}
                     className='md:col-span-1 col-span-4  grid place-items-center'>
-                    <div className='text-[36px] flex flex-col text-center md:text-left'>
-                         <div className='text-2xl sm:text-[50px]'>
-                         Projects
-                        </div>
-                        <a className='text-sm md:text-md mb-5 underline underline-offset-8  cursor-pointer'
+                    <div className='text-[20px] flex flex-col text-center md:text-left'>
+                    <h2 className="text-xl md:text-3xl mb-1 text-black dark:text-white max-w-4xl">
+                        Projects
+                    </h2>
+                        <a className='content-para  mb-5 underline underline-offset-8  cursor-pointer'
                             onClick={() => window.open('https://github.com/Risiidhan?tab=repositories', "_blank")}>
                             View All Projects - Github
                         </a>
