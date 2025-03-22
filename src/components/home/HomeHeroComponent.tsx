@@ -3,6 +3,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { TextHoverEffect } from '../ui/CoverText';
 const HomeHeroComponent = () => {
     const targetRef = useRef(null);
     const textBgRef = useRef(null)
@@ -14,20 +15,20 @@ const HomeHeroComponent = () => {
 
     // Title transforms: opacity and y-position
     const titleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    const mediaOpacity = useTransform(scrollYProgress, [0.3, 0.31], [1, 0]);
+    const mediaOpacity = useTransform(scrollYProgress, [0.3, 0.51], [1, 0]);
 
-    const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+    const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
     // const bgDivWidth = useTransform(scrollYProgress, [0, 1], [ ]);
 
     return (
         <>
-            <div ref={targetRef} className="h-[200vh]  w-full flex flex-col items-center">
+            <div ref={targetRef} className="h-[120dvh] lg:h-[190vh]  w-full flex flex-col items-center">
                 <motion.div
                     style={{
                         opacity: titleOpacity,
                         scale: titleScale
                     }}
-                    className="sticky top-[40dvh] w-[100dvw] translate-y-[50%] text-center"
+                    className="sticky top-[40dvh] lg:top-[20dvh] w-[100dvw] translate-y-[50%] text-center"
                 >
                     <div className='relative w-[100dvw]'>
                         <motion.div
@@ -37,23 +38,26 @@ const HomeHeroComponent = () => {
                             className='absolute w-full h-full top-1'>
 
                         </motion.div>
-                        <p className="text-[30px] w-[100dvw] md:text-[60px] leading-[2rem] sm:leading-[5rem] font-semibold z-10 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                            Risiidhan Punniymoorthy
+                        <p className="text-[30px] w-[100dvw] md:text-[60px] leading-[2rem] sm:leading-[3rem] font-semibold z-10 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+
+                            <TextHoverEffect text="RISIIDHAN" />
                         </p>
+                        <p className="content-para -mt-5 sm:text-[30px]">
+                            Software Engineer | BEng (Hons) | Full-Stack Developer
+                        </p>
+                        <div className="typewriter">
+                            <p className="content-para sm:text-[24px]">WELCOME TO MY PORTFOLIO</p>
+                        </div>
                     </div>
-                    <p className="text-[20px]  sm:text-[32px]">
-                        Software Engineer | BEng (Hons) | Full-Stack Developer
-                    </p>
-                    <div className="typewriter">
-                        <p className="text-[20px] w-full sm:text-[40px]">WELCOME TO MY PORTFOLIO</p>
-                    </div>
+
                 </motion.div>
 
+
                 <motion.div
-                style={{
-                    opacity: mediaOpacity
-                }}
-                className="flex absolute top-[85dvh] items-center gap-6 justify-center">
+                    style={{
+                        opacity: mediaOpacity
+                    }}
+                    className="flex absolute top-[85dvh] items-center gap-6 justify-center">
                     <a className='w-6 h-6 ' href="https://x.com/risiidhan" target="blank">
 
                         <svg viewBox="0 0 128 128">
@@ -61,9 +65,9 @@ const HomeHeroComponent = () => {
                         </svg>
 
                     </a>
-                    <a className='w-6 h-6 ' href="https://www.linkedin.com/in/risiidhan/" target="blank"><img  src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan punniyamoorthy" /></a>
-                    <a className='w-6 h-6 ' href="https://instagram.com/risiidhan" target="blank"><img  src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan" /></a>
-                    <a className='w-9 h-9 ' href="https://www.hackerrank.com/rkishon4" target="blank"><img  src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan" /></a>
+                    <a className='w-6 h-6 ' href="https://www.linkedin.com/in/risiidhan/" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan punniyamoorthy" /></a>
+                    <a className='w-6 h-6 ' href="https://instagram.com/risiidhan" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan" /></a>
+                    <a className='w-9 h-9 ' href="https://www.hackerrank.com/rkishon4" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan" /></a>
 
                 </motion.div>
             </div>

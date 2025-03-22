@@ -31,7 +31,7 @@ const Tools = () => {
 
                         <h1 className='text-center text-[16.8px] sm:text-[20px] pl-0 md:pl-6 pt-3 md:text-md mb-4 tracking-wide'>
                             Languages and Frameworks:</h1>
-                        <Marquee autoFill={true} pauseOnHover>
+                        <Marquee autoFill={true}>
                             <div className='flex items-center space-x-8 py-3 md:py-6 ml-6'>
                                 <a className='w-9 md:w-16   2xl:w-20 h-9 md:h-16   2xl:h-20 mx-2' href="https://angular.io" target="blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" /> </a>
                                 <a className='w-9 md:w-16   2xl:w-20 h-9 md:h-16   2xl:h-20' href="https://nextjs.org/" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" /></a>
@@ -44,7 +44,7 @@ const Tools = () => {
                                 </a>
                             </div>
                         </Marquee>
-                        <Marquee autoFill={true} pauseOnHover direction='right'>
+                        <Marquee autoFill={true} direction='right'>
                             <div className='flex items-center  space-x-8 py-3 md:py-6 ml-6'>
                                 <a className="w-9 md:w-16  2xl:w-20 h-9 md:h-16  2xl:h-20" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" /> </a>
                                 <a className="w-9 md:w-16  2xl:w-20 h-9 md:h-16  2xl:h-20" href="https://www.docker.com/" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" /></a>
@@ -57,7 +57,7 @@ const Tools = () => {
 
                         </Marquee>
 
-                        <Marquee autoFill={true} pauseOnHover>
+                        <Marquee autoFill={true}>
                             <div className='flex items-center space-x-8 py-3 md:py-6  ml-6'>
                                 <a className='w-9 md:w-16   2xl:w-20 h-9 md:h-16   2xl:h-20' href="https://git-scm.com/" target="blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" /> </a>
                                 <a className='w-9 md:w-16   2xl:w-20 h-9 md:h-16   2xl:h-20' href="https://getbootstrap.com" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" /></a>

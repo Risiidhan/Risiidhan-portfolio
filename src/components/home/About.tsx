@@ -7,6 +7,8 @@ import { fadeIn } from '../partials/framer-motion'
 const About = () => {
     // const isMobile = window.innerWidth <= 768;
     // const containerMotion = isMobile ? "hidden" : "show";
+
+    
   
     return (
       <div className="mb-[8rem] ">
