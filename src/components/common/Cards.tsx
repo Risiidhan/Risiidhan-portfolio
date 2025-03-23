@@ -33,7 +33,7 @@ const Cards = ({ prop }: any) => {
             cards.forEach(card => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
-            return window.innerWidth >= 768? maxHeight + 2 : maxHeight + 5;
+            return window.innerWidth >= 768 ? maxHeight + 2 : maxHeight + 5;
         };
 
         const applyMaxHeight = () => {
@@ -50,44 +50,44 @@ const Cards = ({ prop }: any) => {
         <>
             <div ref={cardRef} className="border bg-gradient-to-b from-pink-400 via-purple-500 to-blue-500 rounded-2xl !shadow-none px-[0.7px] py-[0.7px] card-container">
                 <div className='bg-[#0f0f0f] w-full h-full rounded-[15px] px-8 py-3'>
-                <div className="flex items-center justify-between py-2">
-                    <div className='w-6 h-6 2xl:w-9 2xl:h-9 flex gap-2'>
-                    {renderIcons()}
+                    <div className="flex items-center justify-between py-2">
+                        <div className='w-6 h-6 2xl:w-9 2xl:h-9 flex gap-2'>
+                            {renderIcons()}
+                        </div>
+                        <div className='flex justify-end items-center gap-1 w-24 h-px 2xl:w-32'>
+                            <FaStar /> {prop.stargazers_count}
+                            <TbGitFork /> {prop.forks_count}
+                        </div>
                     </div>
-                    <div className='flex justify-end items-center gap-1 w-24 h-px 2xl:w-32'>
-                        <FaStar /> {prop.stargazers_count}
-                        <TbGitFork /> {prop.forks_count}
-                    </div>
-                </div>
 
-                <h5 className="block font-sans text-xl 2xl:text-4xl font-medium  ">
-                    {prop.name}
-                </h5>
-                <p className=" pt-3 md:pb-6 block font-sans text-[16.8px] font-thin leading-relaxed antialiased">
-                    {description}
-                </p>
-                <div className="flex items-center gap-2 absolute bottom-3 mb-4">
-                    <button
-                        className="flex justify-center items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-amber-300"
-                        type="button"
-                        data-ripple-light="true"
-                        onClick={() => window.open(prop.html_url, "_blank")}
-                    >
-                        <FaGithub className='mr-1' />
-                        Source
-                    </button>
-                    {prop.homepage && (
+                    <h5 className="block font-sans text-xl 2xl:text-4xl font-medium  ">
+                        {prop.name}
+                    </h5>
+                    <p className=" pt-3 md:pb-6 block font-sans text-[16.8px] font-thin leading-relaxed antialiased">
+                        {description}
+                    </p>
+                    <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                         <button
                             className="flex justify-center items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-amber-300"
                             type="button"
                             data-ripple-light="true"
-                            onClick={() => window.open(prop.homepage, "_blank")}
+                            onClick={() => window.open(prop.html_url, "_blank")}
                         >
-                            <FaLink className='mr-1' />
-                            Website
+                            <FaGithub className='mr-1' />
+                            Source
                         </button>
-                    )}
-                </div>
+                        {prop.homepage && (
+                            <button
+                                className="flex justify-center items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-amber-300"
+                                type="button"
+                                data-ripple-light="true"
+                                onClick={() => window.open(prop.homepage, "_blank")}
+                            >
+                                <FaLink className='mr-1' />
+                                Website
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
         </>
