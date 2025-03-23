@@ -40,13 +40,13 @@ const HomeHeroComponent = () => {
                         </motion.div>
                         <p className="text-[30px] w-[100dvw] md:text-[60px] leading-[2rem] sm:leading-[3rem] font-semibold z-10 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
 
-                            <TextHoverEffect text="RISIIDHAN" />
+                            <TextHoverEffect automatic={true} text="RISIIDHAN" />
                         </p>
                         <p className="content-para -mt-5 sm:text-[30px]">
                             Software Engineer | BEng (Hons) | Full-Stack Developer
                         </p>
                         <div className="typewriter">
-                            <p className="content-para sm:text-[24px]">WELCOME TO MY PORTFOLIO</p>
+                            <p className="content-para sm:text-[24px]">I'M RISIIDHASN PUNNIYAMOORTHY, WELCOME TO MY PORTFOLIO</p>
                         </div>
                     </div>
 

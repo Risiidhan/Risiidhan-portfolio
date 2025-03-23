@@ -16,10 +16,6 @@ const Form = () => {
     }
     const sendEmail = (e: any) => {
         e.preventDefault();
-        console.log("Service ID:", process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID);
-        console.log("Template ID:", process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID);
-        console.log("Public Key:", process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY);
-
         emailjs
             .sendForm(
                 process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
@@ -40,12 +36,12 @@ const Form = () => {
 
                 }
             );
-        resetForm();    
+        resetForm();
     };
 
     return (
         <>
-            <form ref={form} onSubmit={sendEmail}>
+            <form className='w-full p-[30px]' ref={form} onSubmit={sendEmail}>
                 <div className="space-y-12">
                     <div className="border-b border-gray-900/10 pb-2">
                         <h2 className="text-2xl 2xl:text-5xl font-semibold leading-7 ">G Mail</h2>
@@ -104,9 +100,15 @@ const Form = () => {
                     </div>
 
                     <div className="mt-1 flex items-center justify-end gap-x-6">
-                        <button type="button" className="text-sm 2xl:text-3xl font-semibold leading-6"
+                        <button type="button" className="text-sm 2xl:text-3xl hover:underline transition-all duration-100 font-semibold leading-6"
                             onClick={() => resetForm()}>Cancel</button>
-                        <button type="submit" value="Send" className="border-2 border-amber-300 px-5 py-1 text-sm 2xl:text-3xl font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400">Send</button>
+                            
+                        <button type="submit" value="Send" className="relative inline-flex h-8 active:scale-95 overflow-hidden rounded-full p-[1px] focus:outline-none active:sacle-95">
+                            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] px-6 active:scale-95  bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center px-6 active:scale-95  rounded-full bg-slate-950 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                                Submit
+                            </span>
+                        </button>
                     </div>
                 </div>
             </form>
