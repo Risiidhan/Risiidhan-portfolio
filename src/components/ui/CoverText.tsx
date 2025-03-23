@@ -14,6 +14,13 @@ export const TextHoverEffect = ({
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
+  const [strokeWidth, setStrokeWidth] = useState(0.4); // Default for desktop
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setStrokeWidth(window.innerWidth < 768 ? 0.7 : 0.4);
+    }
+  }, []);
 
   useEffect(() => {
     if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -103,7 +110,7 @@ export const TextHoverEffect = ({
          visible: {
            strokeDashoffset: 0,
            strokeDasharray: 1000,
-           strokeWidth: window.innerWidth < 768 ? 0.7 : 0.4, // Adjust based on screen width
+           strokeWidth: strokeWidth, // Adjust based on screen width
          },
        }}
         transition={{
