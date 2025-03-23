@@ -111,3 +111,11 @@ body {
   mask-composite: exclude;
   filter: blur(8px); /* Creates glow effect */
 }
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6); /* Tailwind pink-500 to violet-500 */
+}

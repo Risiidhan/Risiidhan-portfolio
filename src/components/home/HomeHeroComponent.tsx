@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TextHoverEffect } from '../ui/CoverText';
 import { FloatingDock } from '../ui/FloatingDock';
+import TextParaAnimation from '../ui/TextParaAnimation';
 const HomeHeroComponent = () => {
     const targetRef = useRef(null);
     const textBgRef = useRef(null)
@@ -14,12 +15,8 @@ const HomeHeroComponent = () => {
         offset: ["start center", "end end"]
     });
 
-    // Title transforms: opacity and y-position
     const titleOpacity = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
-    const mediaOpacity = useTransform(scrollYProgress, [0.3, 0.51], [1, 0]);
-
     const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
-    // const bgDivWidth = useTransform(scrollYProgress, [0, 1], [ ]);
 
     const Links = [
         {
@@ -74,15 +71,20 @@ const HomeHeroComponent = () => {
 
                             <TextHoverEffect automatic={true} text="RISIIDHAN" />
                         </p>
-                        <p className="content-para -mt-[20px] sm:text-[30px]">
-                            Software Engineer | BEng (Hons) | Full-Stack Developer
-                        </p>
-                        <div className="typewriter">
-                            <p className="content-para sm:text-[24px]">I'M RISIIDHASN PUNNIYAMOORTHY, WELCOME TO MY PORTFOLIO</p>
-                        </div>
+                        <TextParaAnimation>
+
+                            <p className="content-para -mt-[20px] sm:text-[30px]">
+                                Software Engineer | BEng (Hons) | Full-Stack Developer
+                            </p>
+                        </TextParaAnimation>
+                        <TextParaAnimation>
+                            <div className="typewriter">
+                                <p className="content-para sm:text-[24px]">I'M RISIIDHASN PUNNIYAMOORTHY, WELCOME TO MY PORTFOLIO</p>
+                            </div>
                         <div className="flex relative top-[10dvh] items-center gap-6 justify-center">
                             <FloatingDock items={Links} desktopClassName={"scale-[1.5]"} />
                         </div>
+                        </TextParaAnimation>
                     </div>
 
                 </motion.div>

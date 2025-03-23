@@ -40,7 +40,7 @@ const Cards = ({ prop }: any) => {
             const maxHeight = setMaxHeight();
             const cards = document.querySelectorAll('.card-container');
             cards.forEach((card: any) => {
-                card.style.height = `${maxHeight}px`;
+                card.style.height = `${maxHeight+1.5}px`;
             });
         };
         applyMaxHeight();
@@ -68,7 +68,7 @@ const Cards = ({ prop }: any) => {
                     </p>
                     <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                         <button
-                            className="flex justify-center items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-amber-300"
+                            className="flex justify-center hover:bg-purple-300 hover:text-black mt-[0.5rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-purple-300  rounded-md"
                             type="button"
                             data-ripple-light="true"
                             onClick={() => window.open(prop.html_url, "_blank")}
@@ -78,7 +78,7 @@ const Cards = ({ prop }: any) => {
                         </button>
                         {prop.homepage && (
                             <button
-                                className="flex justify-center items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-amber-300"
+                                className="flex justify-center hover:bg-purple-300 hover:text-black mt-[0.5rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-purple-300  rounded-md"
                                 type="button"
                                 data-ripple-light="true"
                                 onClick={() => window.open(prop.homepage, "_blank")}

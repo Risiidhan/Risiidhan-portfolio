@@ -6,7 +6,7 @@ export const timelineContent: TimelineEntry[] = [
         title: "Bachelor’s in Software Engineering",
         subTitle: (
             <>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                <span className="text-gradient">
                     London Metropolitan
                 </span> (2022 – 2023)
             </>
@@ -23,7 +23,7 @@ export const timelineContent: TimelineEntry[] = [
         title: "Front End Intern",
         subTitle: (
             <>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                <span className="text-gradient">
                     Aizenit - Sri Lanka
                 </span> (March 2022 – July 2022)
             </>
@@ -40,7 +40,7 @@ export const timelineContent: TimelineEntry[] = [
         title: "Coding Hacakthon",
         subTitle: (
             <>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                <span className="text-gradient">
                     ESOFT – Sri Lanka
                 </span> (2022)
             </>
@@ -59,7 +59,7 @@ export const timelineContent: TimelineEntry[] = [
         title: "Software Engineer",
         subTitle: (
             <>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                <span className="text-gradient">
                     FINAP – Sri Lanka
                 </span> (Feb 2023 – May 2024)
             </>
@@ -76,7 +76,7 @@ export const timelineContent: TimelineEntry[] = [
         title: "Software Engineer",
         subTitle: (
             <>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                <span className="text-gradient">
                     gsmfeed – Dubai
                 </span> (June 2024 - Present)
             </>
@@ -86,6 +86,7 @@ export const timelineContent: TimelineEntry[] = [
                 Contributing to a social media platform for traders using Next.js, Tailwind, Laravel, and Framer Motion.
                 Led Contacts page development, verified 200+ users via KYC, and implemented multi-language support with Redux.
                 Integrated Stripe for subscriptions, managed event registrations, and enhanced landing page interactivity.
+                Reference : <a style={{color: "#baa0ee"}} href="https://gsmfeed.com/" className="!text-purple-500 underline !hover:text-purple-700">gsmfeed.com</a>
             </>
         ),
     },

@@ -7,6 +7,7 @@ import About from './About'
 import AboutTimeline from './AboutTimeline'
 import { Vortex } from '../ui/vortex'
 import Contact from './Contact'
+import Footer from './Footer'
 
 
 const HomeSection = () => {
@@ -28,6 +29,7 @@ const HomeSection = () => {
                 <Projects />
                 {/* <Stats /> */}
                 <Contact />
+                <Footer />
             </div>
         </div>
 

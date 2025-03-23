@@ -8,6 +8,8 @@ import {
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image"
+import TextReveal from "./TextReveal";
+import TextParaAnimation from "./TextParaAnimation";
 
 
 export const Timeline = ({ data, bodyTitle, bodyContent }:
@@ -32,21 +34,26 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
         offset: ["start 10%", "end 50%"],
     });
 
-    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height-200]);
+    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height - 200]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
     return (
         <div
-            className="w-full mt-[-20%] rounded-2xl bg-white dark:bg-neutral-950 font-sans pb-[60px] md:px-10"
+            className="w-full  rounded-2xl bg-white dark:bg-neutral-950 font-sans pb-[60px] md:px-10"
             ref={containerRef}
         >
             <div className="max-w-7xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
-                <h2 className="text-xl md:text-3xl mb-4 text-black dark:text-white max-w-4xl">
-                    {bodyTitle}
-                </h2>
-                <p className="text-neutral-700 dark:text-neutral-300 md:text-lg max-w-2xl">
-                    {bodyContent}
-                </p>
+
+                <TextReveal>
+                    <h2 className="text-xl text-left md:text-3xl mb-4 text-black dark:text-white max-w-4xl">
+                        {bodyTitle}
+                    </h2>
+                </TextReveal>
+                <TextParaAnimation>
+                    <p className="text-neutral-700 dark:text-neutral-300 md:text-lg max-w-2xl">
+                        {bodyContent}
+                    </p>
+                </TextParaAnimation>
             </div>
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-[7rem]">
@@ -59,18 +66,24 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
                             <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
                             </div>
-                            <h3 className="hidden md:block text-xl md:pl-20 md:text-[30px] text-neutral-500 dark:text-neutral-500 leading-[1.2]">
-                                {item.title}
-                            </h3>
+                            <TextReveal>
+                                <h3 className="hidden md:block text-xl md:pl-20 md:text-[30px] text-neutral-500 dark:text-neutral-500 leading-[1.2]">
+                                    {item.title}
+                                </h3>
+                            </TextReveal>
                         </div>
 
                         <div className="relative text-sm md:text-md pl-20 pr-4 md:pl-4 w-full">
                             <h3 className=" block text-lg md:text-[25px] mb-4 text-left text-neutral-500 dark:text-neutral-500 leading-[1.5]">
                                 <span className="text-white md:hidden">{item.title} <br /></span> {item.subTitle}
                             </h3>
-                            <span className="content-para">
-                                {item.content}{" "}
-                            </span>
+                            <TextParaAnimation>
+
+                                <span className="content-para">
+                                    {item.content}{" "}
+                                </span>
+                            </TextParaAnimation>
+
                             {item?.img ? (
                                 <div className="mt-4">
                                     <Image className="rounded-2xl w-full mask-fade-bottom"
