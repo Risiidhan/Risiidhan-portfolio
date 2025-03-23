@@ -56,11 +56,10 @@ const Projects = () => {
                         </a>
                     </div>
                 </motion.div>
-                <div className='
+                <div className='fade-out    
                     md:col-span-3 col-span-4 h-fit
                     place-items-center md:place-items-start pt-6'>
                     <MemoizedCarousel props={cachedRepos} />
-
                 </div>
             </div>
         </>

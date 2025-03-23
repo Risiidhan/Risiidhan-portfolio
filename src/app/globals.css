@@ -119,3 +119,28 @@ body {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #ec4899, #8b5cf6); /* Tailwind pink-500 to violet-500 */
 }
+.fade-out {
+  position: relative;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.fade-out::before,
+.fade-out::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px; /* Adjust width for stronger fade */
+  height: 100%;
+  pointer-events: none;
+  z-index: 20; /* Higher than the content inside */
+}
+
+.fade-out::before {
+  left: 0;
+  background: linear-gradient(to right, black, transparent);
+}
+
+.fade-out::after {
+  right: 0;
+  background: linear-gradient(to left, black, transparent);
+}

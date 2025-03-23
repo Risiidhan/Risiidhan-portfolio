@@ -8,13 +8,14 @@ import { EffectCoverflow, Pagination, Autoplay, EffectFade } from 'swiper/module
 import { useState, useEffect, useMemo } from 'react';
 import Cards from './Cards';
 
-const Carousel = ({props}: any) => {
+
+const Carousel = ({ props }: any) => {
     const [slidesPerView, setSlidesPerView] = useState(2);
 
     useEffect(() => {
         let resizeTimer: any;
 
-       const updateSlidesPerView = () => {
+        const updateSlidesPerView = () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 if (window.innerWidth > 1300)
@@ -23,8 +24,8 @@ const Carousel = ({props}: any) => {
                     setSlidesPerView(2);
                 else
                     setSlidesPerView(1);
-            }, 200); 
-        }; 
+            }, 200);
+        };
 
         updateSlidesPerView();
         window.addEventListener('resize', updateSlidesPerView);
@@ -58,13 +59,13 @@ const Carousel = ({props}: any) => {
     }), [slidesPerView, props?.length]);
 
     return (
-         <Swiper {...swiperConfig}>
-            {props?.map((item: any, index: any) => (
-                <SwiperSlide key={index}>
-                    <Cards prop={item} />
-                </SwiperSlide>
-            ))}
-        </Swiper>
+            <Swiper {...swiperConfig}>
+                {props?.map((item: any, index: any) => (
+                    <SwiperSlide key={index}>
+                        <Cards prop={item} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
     )
 }
 
