@@ -1,21 +1,34 @@
 "use client"
 
-import React, { useRef } from 'react'
-import Image from 'next/image'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TextHoverEffect } from '../ui/CoverText';
 import { FloatingDock } from '../ui/FloatingDock';
 import TextParaAnimation from '../ui/TextParaAnimation';
 const HomeHeroComponent = () => {
     const targetRef = useRef(null);
-    const textBgRef = useRef(null)
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize(); // Set initially
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const { scrollYProgress } = useScroll({
         target: targetRef,
         offset: ["start center", "end end"]
     });
 
-    const titleOpacity = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
+    const titleOpacity = useTransform(
+        scrollYProgress,
+        isMobile ? [0.6, 1] : [0.4, 1], // Adjust mobile range
+        [1, 0]
+    );
     const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
 
     const Links = [
