@@ -43,7 +43,7 @@ const Tools = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
-                className='md:col-span-1 col-span-3 md:order-2 mt-[-20%] order-1 grid place-items-center'>
+                className='md:col-span-1 col-span-3 md:order-2  order-1 grid place-items-center'>
                 <span className='text-2xl sm:text-[50px] mb-10'>
 
                 </span>
@@ -62,8 +62,8 @@ const Tools = () => {
                     <section key={index} className={`w-full flex ${index == 1 ? "justify-start" : "justify-center"} my-4`}>
                         <div className='flex justify-between w-[90%]'>
                             {stack.map((item, subIndex) => (
-                                <div key={subIndex} className={`w-fit border transition-all duration-100 ${subIndex%2== 0 ? "reverse-vertical-move-animation": "vertical-move-animation"} rounded-full
-                                 h-[100px] mx-2 flex justify-center aspect-square`}>
+                                <div key={subIndex} className={`w-fit border transition-all duration-100 ${subIndex%2== 0 ? "reverse-vertical-move-animation border-purple-400": "vertical-move-animation border-blue-600"} 
+                                rounded-full shadow-lg shadow-[#be70cb5a] h-[100px] mx-2 flex justify-center aspect-square`}>
                                     <Image src={item} width={50} height={50} className='h-auto aspect-square w-[50px]' alt="" />
                                 </div>
                             ))}

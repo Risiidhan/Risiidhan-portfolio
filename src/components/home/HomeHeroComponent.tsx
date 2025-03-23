@@ -15,7 +15,7 @@ const HomeHeroComponent = () => {
     });
 
     // Title transforms: opacity and y-position
-    const titleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+    const titleOpacity = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
     const mediaOpacity = useTransform(scrollYProgress, [0.3, 0.51], [1, 0]);
 
     const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
@@ -60,7 +60,7 @@ const HomeHeroComponent = () => {
                         opacity: titleOpacity,
                         scale: titleScale
                     }}
-                    className="sticky top-[40dvh] lg:top-[20dvh] w-[100dvw] translate-y-[50%] text-center"
+                    className="sticky top-[40dvh] lg:top-[15dvh] w-[100dvw] translate-y-[50%] text-center"
                 >
                     <div className='relative w-[100dvw]'>
                         <motion.div
@@ -70,28 +70,24 @@ const HomeHeroComponent = () => {
                             className='absolute w-full h-full top-1'>
 
                         </motion.div>
-                        <p className="text-[30px] w-[100dvw] md:text-[60px] leading-[2rem] sm:leading-[3rem] font-semibold z-10 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                        <p className="">
 
                             <TextHoverEffect automatic={true} text="RISIIDHAN" />
                         </p>
-                        <p className="content-para -mt-5 sm:text-[30px]">
+                        <p className="content-para -mt-[20px] sm:text-[30px]">
                             Software Engineer | BEng (Hons) | Full-Stack Developer
                         </p>
                         <div className="typewriter">
                             <p className="content-para sm:text-[24px]">I'M RISIIDHASN PUNNIYAMOORTHY, WELCOME TO MY PORTFOLIO</p>
                         </div>
+                        <div className="flex relative top-[10dvh] items-center gap-6 justify-center">
+                            <FloatingDock items={Links} desktopClassName={"scale-[1.5]"} />
+                        </div>
                     </div>
 
                 </motion.div>
 
-                <motion.div
-                    style={{
-                        opacity: mediaOpacity
-                    }}
-                    className="hidden md:flex absolute top-[75dvh] items-center gap-6 justify-center">
-                    <FloatingDock items={Links} />
 
-                </motion.div>
             </div>
 
         </>

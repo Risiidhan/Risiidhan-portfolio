@@ -53,7 +53,7 @@ const Carousel = ({props}: any) => {
             disableOnInteraction: false,
         },
         initialSlide: 3,
-        modules: [EffectCoverflow, Pagination, EffectFade],
+        modules: [EffectCoverflow, Autoplay, Pagination, EffectFade],
         className: "mySwiper"
     }), [slidesPerView, props?.length]);
 

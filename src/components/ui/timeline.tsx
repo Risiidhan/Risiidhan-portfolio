@@ -37,14 +37,14 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
 
     return (
         <div
-            className="w-full rounded-2xl bg-white dark:bg-neutral-950 font-sans pb-[60px] md:px-10"
+            className="w-full mt-[-20%] rounded-2xl bg-white dark:bg-neutral-950 font-sans pb-[60px] md:px-10"
             ref={containerRef}
         >
             <div className="max-w-7xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
                 <h2 className="text-xl md:text-3xl mb-4 text-black dark:text-white max-w-4xl">
                     {bodyTitle}
                 </h2>
-                <p className="text-neutral-700 dark:text-neutral-300 md:text-lg max-w-sm">
+                <p className="text-neutral-700 dark:text-neutral-300 md:text-lg max-w-2xl">
                     {bodyContent}
                 </p>
             </div>

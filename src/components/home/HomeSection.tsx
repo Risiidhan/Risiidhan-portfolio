@@ -23,8 +23,8 @@ const HomeSection = () => {
                 >
                     <HomeHeroComponent />
                 </Vortex>
-                <Tools />
                 <AboutTimeline />
+                <Tools />
                 <Projects />
                 {/* <Stats /> */}
                 <Contact />
