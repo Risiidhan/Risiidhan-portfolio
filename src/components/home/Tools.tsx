@@ -68,8 +68,8 @@ const Tools = () => {
                     <section key={index} className={`w-full flex justify-center my-4`}>
                         <div className='flex flex-col items-center gap-3 justify-between w-[90%]'>
                             {stack.map((item, subIndex) => (
-                                <div key={subIndex} className={`w-fit border ${subIndex % 2 == 0 ? "reverse-vertical-move-animation" : "vertical-move-animation"} rounded-full
-                                 h-[80px] mx-2 flex justify-center aspect-square`}>
+                                <div key={subIndex} className={`w-fit border ${subIndex % 2 == 0 ? "reverse-vertical-move-animation border-purple-400" : "vertical-move-animation border-blue-400"} rounded-full
+                                 h-[80px] mx-2 flex shadow-[#be70cb5a] justify-center aspect-square`}>
                                     <Image src={item} width={50} height={50} className='h-auto aspect-square w-[30px]' alt="" />
                                 </div>
                             ))}

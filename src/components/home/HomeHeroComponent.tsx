@@ -21,9 +21,7 @@ const HomeHeroComponent = () => {
     const Links = [
         {
             title: "X",
-            icon: <svg viewBox="0 0 128 128">
-                <path d="M75.916 54.2 122.542 0h-11.05L71.008 47.06 38.672 0H1.376l48.898 71.164L1.376 128h11.05L55.18 78.303 89.328 128h37.296L75.913 54.2ZM60.782 71.79l-4.955-7.086-39.42-56.386h16.972L65.19 53.824l4.954 7.086 41.353 59.15h-16.97L60.782 71.793Z" fill="#FFFFFF"></path>
-            </svg>,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/900px-X_logo_2023_%28white%29.png?20230728230735" alt="risiidhan punniyamoorthy" />,
             href: "https://x.com/risiidhan"
         },
         {
@@ -73,17 +71,17 @@ const HomeHeroComponent = () => {
                         </p>
                         <TextParaAnimation>
 
-                            <p className="content-para -mt-[20px] sm:text-[30px]">
-                                Software Engineer | BEng (Hons) | Full-Stack Developer
+                            <p className="text-[20px] -mt-[20px] sm:text-[30px]">
+                                Software Engineer | BEng (Hons) <br className='sm:hidden' /> | Full-Stack Developer
                             </p>
                         </TextParaAnimation>
                         <TextParaAnimation>
                             <div className="typewriter">
-                                <p className="content-para sm:text-[24px]">I'M RISIIDHASN PUNNIYAMOORTHY, WELCOME TO MY PORTFOLIO</p>
+                                <p className="text-[20px] sm:text-[24px]">I'M RISIIDHASN PUNNIYAMOORTHY, WELCOME TO MY PORTFOLIO</p>
                             </div>
-                        <div className="flex relative top-[10dvh] items-center gap-6 justify-center">
-                            <FloatingDock items={Links} desktopClassName={"scale-[1.5]"} />
-                        </div>
+                            <div className="flex relative top-[10dvh] items-center gap-6 justify-center">
+                                <FloatingDock items={Links} desktopClassName={"scale-[1.5]"} />
+                            </div>
                         </TextParaAnimation>
                     </div>
 

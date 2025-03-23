@@ -8,13 +8,13 @@ const Contact = () => {
     return (
         <section className='content-section'>
             <div
-                className="mb-[5rem] mt-[15rem] grid grid-cols-4 gap-4 ">
+                className="mb-[5rem] mt-[7rem] sm:mt-[15rem] grid grid-cols-4 gap-4 ">
                 <div className='
                     md:col-span-2 col-span-5 
                     rounded-xl 
                     md:order-1 order-2 
                     relative overflow-hidden'>
-                    <div className="relative inline-flex h-full active:scale-95 overflow-hidden rounded-2xl w-full p-[1px] focus:outline-none active:sacle-95">
+                    <div className="relative inline-flex h-full overflow-hidden rounded-2xl w-full p-[1px] focus:outline-none">
                         <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]  bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                         <div className="inline-flex h-full  cursor-pointer items-center justify-center rounded-2xl w-full bg-black py-1 text-sm font-medium text-white backdrop-blur-3xl">
                             <Form />

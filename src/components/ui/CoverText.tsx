@@ -84,24 +84,28 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
+        strokeWidth="0.4"
         className="fill-transparent stroke-neutral-200 font-[helvetica] text-[4rem] font-bold dark:stroke-neutral-800"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
       </text>
       <motion.text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        strokeWidth="0.4"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-[4rem] font-bold dark:stroke-neutral-400"
-        initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
-        animate={{
-          strokeDashoffset: 0,
-          strokeDasharray: 1000,
-        }}
+       x="50%"
+       y="50%"
+       textAnchor="middle"
+       dominantBaseline="middle"
+       className="fill-transparent stroke-neutral-200 font-[helvetica] text-[4rem] font-bold dark:stroke-neutral-400"
+       initial="hidden"
+       animate="visible"
+       variants={{
+         hidden: { strokeDashoffset: 1000, strokeDasharray: 1000 },
+         visible: {
+           strokeDashoffset: 0,
+           strokeDasharray: 1000,
+           strokeWidth: window.innerWidth < 768 ? 0.7 : 0.4, // Adjust based on screen width
+         },
+       }}
         transition={{
           duration: 4,
           ease: "easeInOut",
