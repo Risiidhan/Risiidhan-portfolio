@@ -40,7 +40,7 @@ const Tools = () => {
         <div className=''>
             <TextReveal>
                 <div className="max-w-7xl md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center mx-auto pt-20 pb-10 px-4 md:px-8 lg:px-10">
-                    <h2 className="text-xl text-center md:text-3xl mb-4 text-black dark:text-white max-w-4xl">
+                    <h2 className="text-xl text-center md:text-3xl mb-1 text-black dark:text-white max-w-4xl">
                         Technologies
                     </h2>
                     <p className="text-neutral-700 dark:text-neutral-300 md:text-lg max-w-sm">

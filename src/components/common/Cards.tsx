@@ -51,7 +51,7 @@ const Cards = ({ prop }: any) => {
             <div ref={cardRef} className="border bg-gradient-to-b from-pink-400 via-purple-500 to-blue-500 rounded-2xl !shadow-none px-[0.7px] py-[0.7px] card-container">
                 <div className='bg-[#0f0f0f] w-full h-full rounded-[15px] px-8 py-3'>
                     <div className="flex items-center justify-between py-2">
-                        <div className='w-6 h-6 2xl:w-9 2xl:h-9 flex gap-2'>
+                        <div className='w-6 h-6 flex gap-2'>
                             {renderIcons()}
                         </div>
                         <div className='flex justify-end items-center gap-1 w-24 h-px 2xl:w-32'>
@@ -60,7 +60,7 @@ const Cards = ({ prop }: any) => {
                         </div>
                     </div>
 
-                    <h5 className="block font-sans text-xl 2xl:text-4xl font-medium  ">
+                    <h5 className="block font-sans text-xl md:text-2xl font-medium  ">
                         {prop.name}
                     </h5>
                     <p className=" pt-3 md:pb-6 block font-sans text-[16.8px] font-thin leading-relaxed antialiased">
@@ -68,7 +68,7 @@ const Cards = ({ prop }: any) => {
                     </p>
                     <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                         <button
-                            className="flex justify-center hover:bg-purple-300 hover:text-black mt-[0.5rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-purple-300  rounded-md"
+                            className="flex justify-center hover:bg-purple-300 hover:text-black mt-[0.5rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-sm px-3 py-1 border-purple-300  rounded-md"
                             type="button"
                             data-ripple-light="true"
                             onClick={() => window.open(prop.html_url, "_blank")}
@@ -78,7 +78,7 @@ const Cards = ({ prop }: any) => {
                         </button>
                         {prop.homepage && (
                             <button
-                                className="flex justify-center hover:bg-purple-300 hover:text-black mt-[0.5rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-lg px-3 py-1 border-purple-300  rounded-md"
+                                className="flex justify-center hover:bg-purple-300 hover:text-black mt-[0.5rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-sm px-3 py-1 border-purple-300  rounded-md"
                                 type="button"
                                 data-ripple-light="true"
                                 onClick={() => window.open(prop.homepage, "_blank")}
