@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   authors: [{ name: "Risiidhan", url: "https://risiidhan.netlify.app/" }], 
-  title: "Portfolio of Risiidhan Punniyamoorthy",
+  title: "Risiidhan Punniyamoorthy - Portfolio",
   description: `Hi, I'm a Software Engineer who have demonstrated a strong ability
                 to adapt quickly and learn independently. My journey began with a
                 role where I served to enhance website responsiveness 
@@ -37,12 +37,6 @@ export const metadata: Metadata = {
         height: 400,
         alt: "Risiidhan"
       },
-      {
-        url: "https://media.licdn.com/dms/image/v2/D5603AQG2Ag0pXiq8bw/profile-displayphoto-shrink_800_800/B56ZXCA5DIHQAc-/0/1742716770343?e=1748476800&v=beta&t=46djyk2paClwkeu8SBVWTenpfvmUHJDXo61H7_t9ZA4",
-        width: 1200,
-        height: 630,
-        alt: "Risiidhan"
-      }
     ]
   },
   keywords: ["Nextjs", "web developer", "software engineer"]
