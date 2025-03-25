@@ -89,7 +89,7 @@ export const timelineContent: TimelineEntry[] = [
                 Reference : <a style={{color: "#baa0ee"}} href="https://gsmfeed.com/" className="!text-purple-500 underline !hover:text-purple-700">gsmfeed.com</a>
             </>
         ),
-        // img: { src: "/assets/gsmfeed-event., alt: ""jpeg"
+        img: { src: "/assets/gsmfeed-event.jpeg", alt: "gsmfeed-team", }
     },
 ];
 

@@ -63,7 +63,7 @@ const Cards = ({ prop }: any) => {
                     <h5 className="block font-sans text-xl md:text-2xl font-medium  ">
                         {prop.name}
                     </h5>
-                    <p className=" pt-3 md:pb-6 block font-sans text-[16.8px] font-thin leading-relaxed antialiased">
+                    <p className=" pt-3 md:pb-6 block font-sans text-[16px] font-thin leading-relaxed antialiased">
                         {description}
                     </p>
                     <div className="flex items-center gap-2 absolute bottom-3 mb-4">
