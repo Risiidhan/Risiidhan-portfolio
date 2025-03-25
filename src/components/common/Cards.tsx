@@ -15,7 +15,7 @@ const Cards = ({ prop }: any) => {
         let frameworks = description?.split('Framework ')[1]?.split(',') || [lang];
 
         return frameworks.map((framework: any) => (
-            <img key={framework} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${framework}/${framework}-original.svg`} />
+            <img alt={`${framework}-icon `} title={`${framework}-icon `} key={framework} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${framework}/${framework}-original.svg`} />
         ));
     };
 

@@ -23,8 +23,8 @@ const Navbar = () => {
         //     </div>
         // </nav>
         <div className='w-full flex flex-col items-center'>
-        <Image width={40} height={40} alt="" className='rotate-90 z-10' src={"/assets/scroll-down.gif"}/>
-        <Image width={40} height={40} alt="" className='rotate-90 sm:block hidden mt-[-2.5%] z-0' src={"/assets/scroll-down.gif"} />
+        <Image width={40} height={40} alt="scroll-down" className='rotate-90 z-10' src={"/assets/scroll-down.gif"}/>
+        <Image width={40} height={40} alt="scroll-down-mobile" className='rotate-90 sm:block hidden mt-[-2.5%] z-0' src={"/assets/scroll-down.gif"} />
 
         </div>
     )

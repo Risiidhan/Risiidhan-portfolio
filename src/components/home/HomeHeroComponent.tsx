@@ -34,27 +34,27 @@ const HomeHeroComponent = () => {
     const Links = [
         {
             title: "X",
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/900px-X_logo_2023_%28white%29.png?20230728230735" alt="risiidhan punniyamoorthy" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/900px-X_logo_2023_%28white%29.png?20230728230735" alt="risiidhan x link" />,
             href: "https://x.com/risiidhan"
         },
         {
             title: "LinkedIn",
-            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan punniyamoorthy" />,
+            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan linkedIn link" />,
             href: "https://www.linkedin.com/in/risiidhan/",
         },
         {
             title: "Instagram",
-            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan" />,
+            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan Instagram link" />,
             href: "https://instagram.com/risiidhan",
         },
         {
             title: "HackerRank",
-            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan" />,
+            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan hackerRank link" />,
             href: "https://www.hackerrank.com/rkishon4",
         },
         {
             title: "GitHub",
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" />,
+            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt='risiidhan github link' />,
             href: "https://github.com/Risiidhan/",
         }
     ]
@@ -70,6 +70,7 @@ const HomeHeroComponent = () => {
                     }}
                     className="sticky top-[40dvh] lg:top-[15dvh] w-[100dvw] translate-y-[50%] text-center"
                 >
+                    <h1 className='hidden'>Risiidhan Punniyamoorthy</h1>
                     <div className='relative w-[100dvw]'>
                         <motion.div
                             style={{
@@ -78,6 +79,7 @@ const HomeHeroComponent = () => {
                             className='absolute w-full h-full top-1'>
 
                         </motion.div>
+
                         <p className="">
 
                             <TextHoverEffect automatic={true} text="RISIIDHAN" />

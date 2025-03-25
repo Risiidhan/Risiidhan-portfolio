@@ -21,6 +21,7 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
+    const [containerHeight, setContainerHeight] = useState<number>(0);
 
     useEffect(() => {
         if (ref.current) {
@@ -87,7 +88,7 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
                             {item?.img ? (
                                 <div className="mt-4">
                                     <Image className="rounded-2xl w-full mask-fade-bottom"
-                                        src={item?.img} alt={"img"} height={400} width={400} unoptimized />
+                                        src={item?.img?.src} alt={item?.img?.alt} height={400} width={400} unoptimized />
                                 </div>
                             ) : ""}
                         </div>
@@ -102,7 +103,7 @@ export const Timeline = ({ data, bodyTitle, bodyContent }:
                     <motion.div
                         style={{
                             height: heightTransform,
-                            maxHeight: height + "px",
+                            maxHeight: height-200 + "px",
                             opacity: opacityTransform,
                         }}
                         className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"

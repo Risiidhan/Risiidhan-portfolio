@@ -17,7 +17,7 @@ export const timelineContent: TimelineEntry[] = [
                 Ranked as the TOP PERFORMER in the graduating batch.
             </>
         ),
-        img: "/assets/bachelors.jpeg"
+        img: { src: "/assets/bachelors.jpeg", alt: "gradution-image" }
     },
     {
         title: "Front End Intern",
@@ -53,7 +53,7 @@ export const timelineContent: TimelineEntry[] = [
                 and we are proud of our accomplishments in the competition.
             </>
         ),
-        img: "/assets/hackathon.jpeg"
+        img: { src: "/assets/hackathon.jpeg", alt: "hackathon discussion" }
     },
     {
         title: "Software Engineer",
@@ -89,6 +89,7 @@ export const timelineContent: TimelineEntry[] = [
                 Reference : <a style={{color: "#baa0ee"}} href="https://gsmfeed.com/" className="!text-purple-500 underline !hover:text-purple-700">gsmfeed.com</a>
             </>
         ),
+        // img: { src: "/assets/gsmfeed-event., alt: ""jpeg"
     },
 ];
 
