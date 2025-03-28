@@ -27,7 +27,7 @@ const HomeSection = () => {
                 </Vortex>
                 <AboutTimeline />
                 <Tools />
-                {/* <RealProjects /> */}
+                <RealProjects />
                 <Projects />
                 {/* <Stats /> */}
                 <Contact />
