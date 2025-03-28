@@ -1,4 +1,8 @@
+"use client"
+
 import { cn } from "@/libs/utils";
+import Link from "next/link";
+import { FaLink } from "react-icons/fa";
 
 export const BentoGrid = ({
   className,
@@ -25,12 +29,16 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  link,
+  isSource
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  link?: any,
+  isSource?: boolean
 }) => {
   return (
     <div
@@ -46,6 +54,13 @@ export const BentoGridItem = ({
         <div className="font-sans text-[16px] font-normal text-neutral-600 dark:text-neutral-300">
           {description}
         </div>
+        <Link
+          className="flex w-fit justify-center hover:bg-white hover:text-black mt-[0.7rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-sm px-3 py-1 border-white  rounded-md"
+          href={link}
+        >
+          {isSource ? (<FaLink className='mr-1' />) : (<FaLink className='mr-1' /> )}
+          {isSource ? "Source" : "Website"}
+        </Link>
       </div>
     </div>
   );
