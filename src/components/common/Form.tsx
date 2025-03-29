@@ -105,7 +105,7 @@ const Form = () => {
                             
                         <button type="submit" value="Send" className="relative inline-flex h-8 active:scale-95 overflow-hidden rounded-full p-[1px] focus:outline-none active:sacle-95">
                             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] px-6 active:scale-95  bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center px-6 active:scale-95  rounded-full bg-slate-950 py-1 content-para font-medium text-white backdrop-blur-3xl">
+                            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center px-6 active:scale-95  rounded-full bg-slate-950 hover:bg-slate-900 py-1 content-para font-medium text-white backdrop-blur-3xl">
                                 Submit
                             </span>
                         </button>

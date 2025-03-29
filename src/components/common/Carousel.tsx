@@ -60,11 +60,15 @@ const Carousel = ({ props }: any) => {
 
     return (
             <Swiper {...swiperConfig}>
-                {props?.map((item: any, index: any) => (
+                {props ? props?.map((item: any, index: any) => (
                     <SwiperSlide key={index}>
                         <Cards prop={item} />
                     </SwiperSlide>
-                ))}
+                )): (
+                    <SwiperSlide >
+                        <Cards />
+                    </SwiperSlide>
+                )}
             </Swiper>
     )
 }

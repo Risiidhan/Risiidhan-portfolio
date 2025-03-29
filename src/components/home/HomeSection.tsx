@@ -14,7 +14,7 @@ import RealProjects from './RealProjects'
 const HomeSection = () => {
     return (
         <div className=''>
-            <div className='content-section px-4 sm:px-12'>
+            <div className='content-section overflow-x-hidden px-4 sm:px-12'>
                 <Navbar />
                 <Vortex
                     backgroundColor="black"
