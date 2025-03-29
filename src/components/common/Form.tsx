@@ -44,8 +44,8 @@ const Form = () => {
             <form className='w-full p-[30px]' ref={form} onSubmit={sendEmail}>
                 <div className="space-y-12">
                     <div className="border-b border-gray-900/10 pb-2">
-                        <h2 className="text-2xl md:text-3xl font-semibold leading-7 ">G Mail</h2>
-                        <p className="mt-1 content-para  leading-6 ">You can send your G Mail here</p>
+                    <h2 className="text-2xl md:text-3xl font-semibold leading-7">📩 Quick Mail Access</h2>
+                    <p className="mt-1 content-para leading-6">Send an email via Gmail effortlessly.</p>
 
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 

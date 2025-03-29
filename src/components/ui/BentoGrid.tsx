@@ -57,8 +57,10 @@ export const BentoGridItem = ({
         <Link
           className="flex w-fit justify-center hover:bg-white hover:text-black mt-[0.7rem] active:scale-95 transition-all duration-200 items-center border-2 text-xs 2xl:text-sm px-3 py-1 border-white  rounded-md"
           href={link}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {isSource ? (<FaLink className='mr-1' />) : (<FaLink className='mr-1' /> )}
+          {isSource ? (<FaLink className='mr-1' />) : (<FaLink className='mr-1' />)}
           {isSource ? "Source" : "Website"}
         </Link>
       </div>

@@ -1,10 +1,12 @@
 import React from 'react'
 import { BentoGrid, BentoGridItem } from '../ui/BentoGrid'
 import Image from "next/image"
+import TextReveal from '../ui/TextReveal'
+import TextParaAnimation from '../ui/TextParaAnimation'
 
 const RealProjects = () => {
 
-    const GenerateIcons = ( items:  string[] ) => {
+    const GenerateIcons = (items: string[]) => {
         return <div className='w-6 h-6 flex gap-2'>
             {items.map((framework: any) => (
                 <img alt={`${framework}-icon `} className='shadow-white' title={`${framework}-icon `} key={framework} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${framework}/${framework}-original.svg`} />
@@ -27,8 +29,8 @@ const RealProjects = () => {
                  to dynamically fetch.`,
             header: <Skeleton url="/assets/gif/portfolio.gif" />,
             icon: GenerateIcons(["nextjs", "tailwindcss", "framermotion"]),
-            isSource: false,
-            link: "https://risiidhan.netlify.app/"
+            isSource: true,
+            link: "https://github.com/Risiidhan/Risiidhan-portfolio"
         },
 
         {
@@ -46,7 +48,7 @@ const RealProjects = () => {
             description: `Contributed major part in Next.js-based landing site. It features server-side rendering (SSR), 
             Framer Motion animations, and Tailwind CSS for a dynamic and responsive user experience.`,
             header: <Skeleton url="/assets/gif/gsmfeed-landing.gif" />,
-            icon:GenerateIcons(["nextjs", "tailwindcss","laravel"]),
+            icon: GenerateIcons(["nextjs", "tailwindcss", "laravel"]),
             isSource: false,
             link: "https://gsmfeed.com/"
         },
@@ -67,7 +69,7 @@ const RealProjects = () => {
             description: `Contributed to a trader-focused social platform using Next.js, Tailwind, Laravel, 
             and Framer Motion. Built the Contacts page (followers/following), implemented KYC verification
             for 200+ users, added multi-language support and more.`,
-            header: <Skeleton url="/assets/gif/app-gsmfeed.gif" isSquare={true} />,
+            header: <Skeleton url="/assets/gif/gsmfeed-app.gif" isSquare={true} />,
             icon: GenerateIcons(["nextjs", "tailwindcss", "laravel"]),
             isSource: false,
             link: "https://app.gsmfeed.com/"
@@ -75,7 +77,22 @@ const RealProjects = () => {
     ];
 
     return (
-        <div className='h-auto'>
+        <div className='h-auto mb-24'>
+            <TextReveal>
+                <h2 className="text-xl text-center md:text-3xl mb-1 text-black dark:text-white pb-2 ">
+                    Featured Work
+                </h2>
+            </TextReveal>
+            <TextParaAnimation>
+                <div className=' w-full  flex justify-center'>
+                    <p className="text-neutral-700 dark:text-neutral-300 text-center content-para pb-10 sm:max-w-[70%]">
+                        Showcasing a collection of innovative and dynamic projects that blend
+                        creativity with technology. From sleek web applications to powerful backend
+                        solutions, each project reflects a commitment to high-quality development,
+                        performance, and user experience.
+                    </p>
+                </div>
+            </TextParaAnimation>
             <BentoGrid className="2xl:max-w-5xl mx-auto">
                 {items.map((item: any, i: number) => (
                     <BentoGridItem
