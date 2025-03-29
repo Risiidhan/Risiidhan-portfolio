@@ -10,6 +10,7 @@ import Link from 'next/link';
 const Projects = () => {
 
     const [cachedRepos, setCachedRepos] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
 
     const getRepos = async () => {
         try {
@@ -17,6 +18,7 @@ const Projects = () => {
             if (!response.ok) {
                 throw new Error("Failed to fetch repositories");
             }
+            setIsLoading(false)
             return await response.json();
         } catch (error) {
             console.log('Error fetching repositories:', error);
@@ -67,6 +69,7 @@ const Projects = () => {
                     place-items-center md:place-items-start pt-6'>
                     <MemoizedCarousel props={cachedRepos} />
                 </div>
+                {isLoading ? ( <Carousel isLoading={isLoading}/>) : ""}
             </div>
         </>
     )
