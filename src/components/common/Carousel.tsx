@@ -9,7 +9,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Cards from './Cards';
 
 
-const Carousel = ({ props, isLoading }: any) => {
+const Carousel = ({ data, isLoading }: any) => {
     const [slidesPerView, setSlidesPerView] = useState(2);
 
     useEffect(() => {
@@ -54,14 +54,15 @@ const Carousel = ({ props, isLoading }: any) => {
             disableOnInteraction: false,
         },
         initialSlide: 3,
-        modules: [EffectCoverflow, Autoplay, Pagination, EffectFade],
+        modules: [EffectCoverflow, Pagination, EffectFade],
         className: "mySwiper"
     }), [slidesPerView]);
 
+
     return (
         <Swiper {...swiperConfig}>
-            {(props || !isLoading) ? props?.map((item: any, index: any) => (
-                <SwiperSlide key={index}>
+            {(data || !isLoading) ? data?.map((item: any, index: any) => (
+                <SwiperSlide className='!flex w-full justify-center' key={index}>
                     <Cards prop={item} />
                 </SwiperSlide>
             )) : (

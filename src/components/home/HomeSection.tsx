@@ -9,12 +9,13 @@ import { Vortex } from '../ui/vortex'
 import Contact from './Contact'
 import Footer from './Footer'
 import RealProjects from './RealProjects'
+import TestimonalSection from './TestimonalSection'
 
 
 const HomeSection = () => {
     return (
         <div className=''>
-            <div className='content-section overflow-x-hidden px-4 sm:px-12'>
+            <div className='content-section px-4 sm:px-12'>
                 <Navbar />
                 <Vortex
                     backgroundColor="black"
@@ -29,7 +30,7 @@ const HomeSection = () => {
                 <Tools />
                 <RealProjects />
                 <Projects />
-                {/* <Stats /> */}
+                <TestimonalSection />
                 <Contact />
                 <Footer />
             </div>

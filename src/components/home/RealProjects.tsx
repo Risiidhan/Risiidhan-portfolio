@@ -24,57 +24,64 @@ const RealProjects = () => {
         {
             title: "Portfolio",
             description:
-                `Portfolio is a sleek and modern web application built with Nextjs,
-                 Framer motion and Tailwind CSS. It leverages the GitHub and LinkedIn API 
-                 to dynamically fetch.`,
+                `I designed and developed this modern portfolio using Next.js, 
+                 Framer Motion, and Tailwind CSS. It dynamically fetches data 
+                 from GitHub API, showcasing my projects and 
+                 professional experience in an interactive and engaging way.`,
             header: <Skeleton url="/assets/gif/portfolio.gif" />,
             icon: GenerateIcons(["nextjs", "tailwindcss", "framermotion"]),
             isSource: true,
             link: "https://github.com/Risiidhan/Risiidhan-portfolio"
         },
-
+    
         {
             title: "Movie App",
-            description: `This Angular application integrates the OMDB API to display a 
-            vast movie collection, mobile-responsive UI. 
-            Allowign users can search for movies and access detailed information.`,
+            description: `I built this Angular-based movie application, integrating 
+            the TMDB API for an extensive movie collection. I implemented a 
+            mobile-responsive UI and a seamless search functionality that allows 
+            users to discover detailed movie information effortlessly.`,
             header: <Skeleton url="/assets/gif/app-movie.gif" />,
             icon: GenerateIcons(["angular"]),
             isSource: false,
             link: "https://movieapp-74.netlify.app/"
         },
+        
         {
-            title: "gsmfeed landing site",
-            description: `Contributed major part in Next.js-based landing site. It features server-side rendering (SSR), 
-            Framer Motion animations, and Tailwind CSS for a dynamic and responsive user experience.`,
+            title: "GSMFeed Landing Site",
+            description: `I played a major role in developing this landing page, 
+            implementing server-side rendering (SSR) for better performance and SEO. I also 
+            enhanced the UI with Framer Motion, designed 
+            a responsive UI using Tailwind CSS and event managements with backend APIs.`,
             header: <Skeleton url="/assets/gif/gsmfeed-landing.gif" />,
             icon: GenerateIcons(["nextjs", "tailwindcss", "laravel"]),
             isSource: false,
             link: "https://gsmfeed.com/"
         },
-
+    
         {
-            title: "Fitness app",
-            description: `integrating Firebase, Tailwind CSS, jsPDF, Chart.js, and Stripe for data management 
-            and analysis. It features secure authentication with role-based access, an interactive dashboard. 
-             A real-time chat powered by Firebase Realtime Database
-              enables messaging, while jsPDF allows PDF report generation.`,
+            title: "Fitness App",
+            description: `I built this fitness management platform from the ground up, 
+            integrating Angular with Firebase for real-time data management, Stripe for payments, 
+            and Chart.js for analytics. I also implemented secure authentication with 
+            role-based access, a real-time chat feature, and PDF report generation using jsPDF.`,
             header: <Skeleton url="/assets/gif/getstrong.gif" />,
             icon: GenerateIcons(["angular", "firebase", "tailwindcss"]),
             isSource: true,
             link: "https://github.com/Risiidhan/Get-Strong-Fitness-App"
         },
+    
         {
-            title: "gsmfeed app",
-            description: `Contributed to a trader-focused social platform using Next.js, Tailwind, Laravel, 
-            and Framer Motion. Built the Contacts page (followers/following), implemented KYC verification
-            for 200+ users, added multi-language support and more.`,
+            title: "GSMFeed App",
+            description: `I contributed significantly to this full stack trader-focused social platform. 
+            My key contributions included developing the Contacts page (followers/following), implementing KYC verification 
+            for over 200 users, the onboarding process and adding multi-language support to enhance accessibility.`,
             header: <Skeleton url="/assets/gif/gsmfeed-app.gif" isSquare={true} />,
             icon: GenerateIcons(["nextjs", "tailwindcss", "laravel"]),
             isSource: false,
             link: "https://app.gsmfeed.com/"
         },
     ];
+    
 
     return (
         <div className='h-auto mb-24'>

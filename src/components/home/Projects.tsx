@@ -38,11 +38,11 @@ const Projects = () => {
         }
     }, [cachedRepos]);
 
-    const MemoizedCarousel = useMemo(() => React.memo(Carousel), []);
+    const MemoizedCarousel = useMemo(() => (Carousel), []);
 
     return (
         <>
-            <div id='projects' className="content-section  md:mt-24 sm:!mt-[10rem] ">
+            <div id='projects' className="content-section mb-10 md:mt-24 sm:!mt-[10rem] ">
                 <motion.div
                     variants={fadeIn("up", 0.2)}
                     initial="hidden"
@@ -56,20 +56,22 @@ const Projects = () => {
                         <p className='content-para'>
                             Explore additional projects showcasing creativity, problem-solving, and technical expertise.
                         </p>
-                        <Link
-                            href={'https://github.com/Risiidhan?tab=repositories'} target='_blank' rel="noopener noreferrer"
-                            className='content-para text-md text-purple-300 text-center pt-2 mb-5 transition-all
-                          duration-300 hover:underline underline-offset-8  cursor-pointer'>
-                            View All Projects
-                        </Link>
+                        <div className='w-full flex justify-center'>
+                            <Link
+                                href={'https://github.com/Risiidhan?tab=repositories'} target='_blank' rel="noopener noreferrer"
+                                className='content-para w-fit text-md text-purple-300 text-center pt-2 mb-5 transition-all
+                            duration-300 hover:underline underline-offset-8  cursor-pointer'>
+                                View All Projects
+                            </Link>
+                        </div>
                     </div>
                 </motion.div>
                 <div className='fade-out    
                     md:col-span-3 col-span-4 h-fit
                     place-items-center md:place-items-start pt-6'>
-                    <MemoizedCarousel props={cachedRepos} />
+                    <MemoizedCarousel data={cachedRepos} />
                 </div>
-                {isLoading ? ( <Carousel isLoading={isLoading}/>) : ""}
+                {isLoading ? (<Carousel isLoading={isLoading} />) : ""}
             </div>
         </>
     )
