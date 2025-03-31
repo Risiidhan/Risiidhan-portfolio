@@ -45,7 +45,7 @@ const Cards = ({ prop }: any) => {
             if (prop) {
                 const maxHeight = setMaxHeight();
                 cards.forEach((card: any) => {
-                    card.style.height = `${maxHeight + 1.5}px`;
+                    card.style.height = `${maxHeight + 4}px`;
                 });
             } else {
                 cards.forEach((card: any) => {
