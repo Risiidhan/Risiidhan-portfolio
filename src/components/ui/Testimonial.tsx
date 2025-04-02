@@ -41,6 +41,7 @@ export const AnimatedTestimonials = ({
     }, [autoplay]);
 
     const randomRotateY = () => {
+        if (typeof window === "undefined") return 0; // Avoids SSR issue
         return Math.floor(Math.random() * (window.innerWidth >= 768 ? 21 : 13)) - (window.innerWidth >= 768 ? 10 : 5);
     };
 
@@ -49,41 +50,46 @@ export const AnimatedTestimonials = ({
         active: number,
         showHeading: boolean,
         showPara: boolean
-    }) => (
-        <motion.div
-            key={active}
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -20, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-        >
-            {showHeading ? (
-                <>
-                    <h3 className="text-[17px] md:text-[20px] inline font-bold text-black dark:text-white">
-                        {item?.[active]?.name}
-                    </h3> <br />
-                    <p className="text-sm inline-block text-gray-500 dark:text-neutral-500">
-                        {item?.[active]?.designation} | {item?.[active]?.company}
-                    </p>
-                </>
-            ) : ""}
+    }) => {
+        const testimonial = item?.[active];
 
-            {showPara ? (<>
-                <motion.p className="mt-4 mb-4 text-lg text-gray-500 dark:text-neutral-300">
-                    {testimonials[active]?.quote.split(" ").map((word, index) => (
-                        <motion.span
-                            key={index}
-                            initial={{ filter: "blur(10px)", opacity: 0, y: 5, }}
-                            animate={{ filter: "blur(0px)", opacity: 1, y: 0, }}
-                            transition={{ duration: 0.2, ease: "easeInOut", delay: 0.02 * index, }}
-                            className="inline-block">
-                            {word}&nbsp;
-                        </motion.span>
-                    ))}
-                </motion.p>
-            </>) : ""}
-        </motion.div>
-    );
+        if (!testimonial) return null;
+        return (
+            <motion.div
+                key={active}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+            >
+                {showHeading ? (
+                    <>
+                        <h3 className="text-[17px] md:text-[20px] inline font-bold text-black dark:text-white">
+                            {item?.[active]?.name}
+                        </h3> <br />
+                        <p className="text-sm inline-block text-gray-500 dark:text-neutral-500">
+                            {item?.[active]?.designation} | {item?.[active]?.company}
+                        </p>
+                    </>
+                ) : ""}
+
+                {showPara ? (<>
+                    <motion.p className="mt-4 mb-4 text-lg text-gray-500 dark:text-neutral-300">
+                        {testimonials[active]?.quote.split(" ").map((word, index) => (
+                            <motion.span
+                                key={index}
+                                initial={{ filter: "blur(10px)", opacity: 0, y: 5, }}
+                                animate={{ filter: "blur(0px)", opacity: 1, y: 0, }}
+                                transition={{ duration: 0.2, ease: "easeInOut", delay: 0.02 * index, }}
+                                className="inline-block">
+                                {word}&nbsp;
+                            </motion.span>
+                        ))}
+                    </motion.p>
+                </>) : ""}
+            </motion.div>
+        )
+    };
 
     const actionBtns = (isMobile: boolean) => (<div className={`flex gap-4 ${isMobile ? "" : "pt-6"} md:pt-0`}>
         <button
