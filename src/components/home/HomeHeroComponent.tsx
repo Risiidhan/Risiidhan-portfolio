@@ -29,7 +29,12 @@ const HomeHeroComponent = () => {
         isMobile ? [0.6, 1] : [0.4, 1], // Adjust mobile range
         [1, 0]
     );
-    const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
+    const titleScale = useTransform(
+        scrollYProgress,
+         [0, 1], // Adjust mobile range
+         isMobile ? [0.5, 0.85] :[0.5, 0.9]
+    );
+    // const titleScale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
 
     const Links = [
         {

@@ -15,7 +15,7 @@ const TestimonalSection = () => {
     }));
 
     return (
-        <div className='h-auto mt-32'>
+        <div className='h-auto mt-[7rem]'>
             <TextReveal>
                 <h2 className="text-xl text-center md:text-3xl mb-1 text-black dark:text-white pb-2 ">
                     Testimonial

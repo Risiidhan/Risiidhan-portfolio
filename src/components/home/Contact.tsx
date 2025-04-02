@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <section className='content-section'>
             <div
-                className="mb-[5rem] mt-[7rem] grid grid-cols-4 gap-4 ">
+                className="mb-[5rem] mt-[6rem] grid grid-cols-4 gap-4 ">
                 <div className='
                     md:col-span-2 col-span-5 
                     rounded-xl 
