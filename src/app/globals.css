@@ -157,3 +157,7 @@ select:focus-visible {
   right: 0;
   background: linear-gradient(to left, black, transparent);
 }
+
+.swiper-slide {
+  height: auto !important;
+}

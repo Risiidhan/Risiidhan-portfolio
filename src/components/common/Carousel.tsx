@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { useState, useEffect, useMemo } from 'react';
 import Cards from './Cards';
+import NewCard from './NewCard';
 
 
 const Carousel = ({ data, isLoading }: any) => {
@@ -60,10 +61,12 @@ const Carousel = ({ data, isLoading }: any) => {
 
 
     return (
-        <Swiper {...swiperConfig}>
+        <Swiper {...swiperConfig} className="w-full">
             {(data || !isLoading) ? data?.map((item: any, index: any) => (
-                <SwiperSlide className='!flex w-full justify-center' key={index}>
-                    <Cards prop={item} />
+                <SwiperSlide key={index} >
+                    <div className="h-full flex justify-center w-full">
+                        <NewCard prop={item} />
+                    </div>
                 </SwiperSlide>
             )) : (
                 new Array(10).fill(null).map((_, index) => (
