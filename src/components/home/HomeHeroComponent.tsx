@@ -6,8 +6,8 @@ import { TextHoverEffect } from '../ui/CoverText';
 import { FloatingDock } from '../ui/FloatingDock';
 import TextParaAnimation from '../ui/TextParaAnimation';
 const HomeHeroComponent = () => {
-    const targetRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(false);
+    const targetRef = useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         const handleResize = () => {
