@@ -9,12 +9,15 @@ import TextReveal from '../ui/TextReveal'
 import TextParaAnimation from '../ui/TextParaAnimation'
 
 const Tools = () => {
+    
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
+          
 
     const stacks1 = [
         { src: "https://angular.io/assets/images/logos/angular/angular.svg", alt: "Angular" },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", alt: "Next.js" },
         { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg", alt: "React" },
-        { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg", alt: "C#" },
+        { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg", alt: "Laravel" },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg", alt: "Node.js" },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg", alt: ".NET Core" },
     ];
