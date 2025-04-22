@@ -57,7 +57,7 @@ const Projects = () => {
                             Explore additional projects showcasing creativity, problem-solving, and technical expertise.
                         </p>
                         <div className='w-full flex justify-center'>
-                            <Link
+                            <Link 
                                 href={'https://github.com/Risiidhan?tab=repositories'} target='_blank' rel="noopener noreferrer"
                                 className='content-para w-fit text-md text-purple-300 text-center pt-2 mb-5 transition-all
                             duration-300 hover:underline underline-offset-8  cursor-pointer'>
