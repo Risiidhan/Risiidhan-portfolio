@@ -91,19 +91,19 @@ export const timelineContent: TimelineEntry[] = [
         ),
         img: { src: "/assets/gsmfeed-event.jpeg", alt: "gsmfeed-team", }
     },
-    // {
-    //     title: "Software Engineer",
-    //     subTitle: (
-    //         <>
-    //             <span className="text-gradient">
-    //                 KPTAC – Dubai
-    //             </span> (Present)
-    //         </>
-    //     ),
-    //     content: (
-    //         <>
-    //            Contributed primarily as a frontend developer using Next.js, Tailwind CSS, and Framer Motion in projects including a hotel reservation management system and a social media platform landing page. Focused on building responsive UI components, implementing smooth animations, and enhancing user experience.     </>
-    //     ),
-    // },
+    {
+        title: "Software Engineer",
+        subTitle: (
+            <>
+                <span className="text-gradient">
+                    KPTAC – Dubai
+                </span> (Present)
+            </>
+        ),
+        content: (
+            <>
+               Contributed primarily as a frontend developer using Next.js, Tailwind CSS, and Framer Motion in projects including a hotel reservation management system and a social media platform landing page. Focused on building responsive UI components, implementing smooth animations, and enhancing user experience.     </>
+        ),
+    },
 ];
 
