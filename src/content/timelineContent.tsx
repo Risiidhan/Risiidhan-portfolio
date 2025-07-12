@@ -19,23 +19,23 @@ export const timelineContent: TimelineEntry[] = [
         ),
         img: { src: "/assets/bachelors.jpeg", alt: "gradution-image" }
     },
-    {
-        title: "Front End Intern",
-        subTitle: (
-            <>
-                <span className="text-gradient">
-                    Aizenit - Sri Lanka
-                </span> (March 2022 – July 2022)
-            </>
-        ),
-        content: (
-            <>
-                Improved website responsiveness using Tailwind CSS and SCSS.
-                Built the company website with Next.js and Strapi.
-                Enabled native Android deployment using Capacitor and Android Studio.
-            </>
-        ),
-    },
+    // {
+    //     title: "Front End Intern",
+    //     subTitle: (
+    //         <>
+    //             <span className="text-gradient">
+    //                 Aizenit - Sri Lanka
+    //             </span> (March 2022 – July 2022)
+    //         </>
+    //     ),
+    //     content: (
+    //         <>
+    //             Improved website responsiveness using Tailwind CSS and SCSS.
+    //             Built the company website with Next.js and Strapi.
+    //             Enabled native Android deployment using Capacitor and Android Studio.
+    //         </>
+    //     ),
+    // },
     {
         title: "Coding Hacakthon",
         subTitle: (
@@ -78,7 +78,7 @@ export const timelineContent: TimelineEntry[] = [
             <>
                 <span className="text-gradient">
                     gsmfeed – Dubai
-                </span> (June 2024 - Present)
+                </span> (June 2024 - March 2025)
             </>
         ),
         content: (
@@ -88,6 +88,21 @@ export const timelineContent: TimelineEntry[] = [
                 Integrated Stripe for subscriptions, managed event registrations, and enhanced landing page interactivity.
                 Reference : <a style={{color: "#baa0ee"}} href="https://gsmfeed.com/" className="!text-purple-500 underline !hover:text-purple-700">gsmfeed.com</a>
             </>
+        ),
+        img: { src: "/assets/gsmfeed-event.jpeg", alt: "gsmfeed-team", }
+    },
+    {
+        title: "Software Engineer",
+        subTitle: (
+            <>
+                <span className="text-gradient">
+                    KPTAC – Dubai
+                </span> (Present)
+            </>
+        ),
+        content: (
+            <>
+               Contributed primarily as a frontend developer using Next.js, Tailwind CSS, and Framer Motion in projects including a hotel reservation management system and a social media platform landing page. Focused on building responsive UI components, implementing smooth animations, and enhancing user experience.     </>
         ),
         img: { src: "/assets/gsmfeed-event.jpeg", alt: "gsmfeed-team", }
     },

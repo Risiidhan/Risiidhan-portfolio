@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  authors: [{ name: "Risiidhan", url: "https://risiidhan.netlify.app/" }], 
+  authors: [{ name: "Risiidhan", url: "https://risiidhan.com/" }], 
   title: "Risiidhan Punniyamoorthy - Portfolio",
   description: `Hi, I'm a Software Engineer who have demonstrated a strong ability
                 to adapt quickly and learn independently. My journey began with a
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
                 to adapt quickly and learn independently. My journey began with a
                 role where I served to enhance website responsiveness 
                 and now I play a full stack role in the development of comprehensive projects`,
-    url: "https://risiidhan.netlify.app/",
+    url: "https://risiidhan.com/",
     type: "website",
     locale: "en_US",
     images: [
@@ -41,7 +41,11 @@ export const metadata: Metadata = {
       },
     ]
   },
-  keywords: ["Nextjs", "web developer", "software engineer"]
+  keywords: ["Nextjs", "web developer", "software engineer"],
+icons: {
+  icon: "/favicon.ico",
+  shortcut: "/favicon.ico",
+}
 };
 
 export default function RootLayout({

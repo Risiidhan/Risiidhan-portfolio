@@ -15,7 +15,7 @@ export const metadata: Metadata = {
                 to adapt quickly and learn independently. My journey began with a
                 role where I served to enhance website responsiveness 
                 and now I play a full stack role in the development of comprehensive projects`,
-    url: "https://risiidhan.netlify.app/",
+    url: "https://risiidhan.com/",
     type: "website",
     locale: "en_US",
     images: [
