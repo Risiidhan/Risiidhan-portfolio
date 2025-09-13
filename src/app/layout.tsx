@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://risiidhan.com/profile-landscape.png",
+        url: "https://risiidhan.com/profile-landscape.jpg",
         width: 1200,
         height: 630,
         alt: "Risiidhan",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: `Hi, I'm a Software Engineer who have demonstrated a strong ability to adapt quickly and learn independently. My journey began with a role where I served to enhance website responsiveness and now I play a full stack role in the development of comprehensi  ve projects`,
     images: [
       {
-        url: "https://risiidhan.com/profile-landscape.png",
+        url: "https://risiidhan.com/profile-landscape.jpg",
         width: 1200,
         height: 630,
         alt: "Risiidhan",
