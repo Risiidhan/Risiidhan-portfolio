@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://risiidhan.com/profile-landscape.png",
-        width: 400,
-        height: 400,
+        width: 1200,
+        height: 630,
         alt: "Risiidhan",
       },
     ],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://risiidhan.com/profile-landscape.png",
-        width: 400,
-        height: 400,
+        width: 1200,
+        height: 630,
         alt: "Risiidhan",
       },
     ],
