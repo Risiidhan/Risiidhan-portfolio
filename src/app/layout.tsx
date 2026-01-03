@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://risiidhan.com"),
   authors: [{ name: "Risiidhan", url: "https://risiidhan.com/" }],
   title: "Risiidhan Punniyamoorthy - Portfolio",
-  description: `Hi, I'm a Software Engineer who have demonstrated a strong ability
-                to adapt quickly and learn independently. My journey began with a
-                role where I served to enhance website responsiveness 
-                and now I play a full stack role in the development of comprehensive projects`,
+  description:
+    "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
+
   openGraph: {
     title: "Risiidhan Punniyamoorthy",
-    description: "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
+    description:
+      "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
     url: "https://risiidhan.com/",
     type: "website",
     locale: "en_US",
@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Risiidhan Punniyamoorthy",
     creator: "@risiidhan",
-    description: "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
+    description:
+      "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
     images: ["https://risiidhan.com/profile-landscape.jpg"],
   },
   robots: {
