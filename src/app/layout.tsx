@@ -11,10 +11,7 @@ export const metadata: Metadata = {
                 and now I play a full stack role in the development of comprehensive projects`,
   openGraph: {
     title: "Risiidhan Punniyamoorthy",
-    description: `Hi, I'm a Software Engineer who have demonstrated a strong ability
-                to adapt quickly and learn independently. My journey began with a
-                role where I served to enhance website responsiveness 
-                and now I play a full stack role in the development of comprehensive projects`,
+    description: "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
     url: "https://risiidhan.com/",
     type: "website",
     locale: "en_US",
@@ -28,18 +25,31 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Risiidhan Punniyamoorthy",
-    description: `Hi, I'm a Software Engineer who have demonstrated a strong ability to adapt quickly and learn independently. My journey began with a role where I served to enhance website responsiveness and now I play a full stack role in the development of comprehensi  ve projects`,
-    images: [
-      {
-        url: "https://risiidhan.com/profile-landscape.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Risiidhan",
-      },
-    ],
+    creator: "@risiidhan",
+    description: "A Software Engineer who focuses on clean, maintainable code at an architectural level, following solid design principles to build efficient, scalable, and stable systems.",
+    images: ["https://risiidhan.com/profile-landscape.jpg"],
   },
-  keywords: ["Nextjs", "web developer", "software engineer"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  keywords: [
+    "Nextjs",
+    "web developer",
+    "software engineer",
+    "portfolio",
+    "risiidhan",
+    "frontend",
+  ],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -53,7 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={""}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
