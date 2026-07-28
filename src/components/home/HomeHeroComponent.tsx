@@ -39,7 +39,7 @@ const HomeHeroComponent = () => {
     const Links = [
         {
             title: "X",
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/900px-X_logo_2023_%28white%29.png?20230728230735" alt="risiidhan x link" />,
+            icon: <img src="https://img.magnific.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid&w=740&q=80" alt="risiidhan x link" />,
             href: "https://x.com/risiidhan"
         },
         {
@@ -59,7 +59,7 @@ const HomeHeroComponent = () => {
         },
         {
             title: "GitHub",
-            icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt='risiidhan github link' />,
+            icon: <img src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png" alt='risiidhan github link' />,
             href: "https://github.com/Risiidhan/",
         }
     ]
