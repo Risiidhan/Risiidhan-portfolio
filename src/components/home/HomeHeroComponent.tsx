@@ -39,27 +39,27 @@ const HomeHeroComponent = () => {
     const Links = [
         {
             title: "X",
-            icon: <img src="https://img.magnific.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid&w=740&q=80" alt="risiidhan x link" />,
+            src: "/assets/social/x.svg",
             href: "https://x.com/risiidhan"
         },
         {
             title: "LinkedIn",
-            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan linkedIn link" />,
+            src: "/assets/social/linkedin.svg",
             href: "https://www.linkedin.com/in/risiidhan/",
         },
         {
             title: "Instagram",
-            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan Instagram link" />,
+            src: "/assets/social/instagram.svg",
             href: "https://instagram.com/risiidhan",
         },
         {
             title: "HackerRank",
-            icon: <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan hackerRank link" />,
+            src: "/assets/social/hackerrank.svg",
             href: "https://www.hackerrank.com/rkishon4",
         },
         {
             title: "GitHub",
-            icon: <img src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png" alt='risiidhan github link' />,
+            src: "/assets/social/github.svg",
             href: "https://github.com/Risiidhan/",
         }
     ]

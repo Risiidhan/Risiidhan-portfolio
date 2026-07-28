@@ -17,12 +17,18 @@ import {
 import Link from "next/link";
 import { useRef, useState } from "react";
 
+type FloatingDockItem = {
+  title: string;
+  src: string;
+  href: string;
+};
+
 export const FloatingDock = ({
   items,
   desktopClassName,
   mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: FloatingDockItem[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
@@ -38,7 +44,7 @@ const FloatingDockMobile = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: FloatingDockItem[];
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
@@ -74,7 +80,7 @@ const FloatingDockMobile = ({
                   key={item.title}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <img src={item.src} alt={item.title} className="h-4 w-4" />
                 </Link>
               </motion.div>
             ))}
@@ -95,7 +101,7 @@ const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: FloatingDockItem[];
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
@@ -118,12 +124,12 @@ const FloatingDockDesktop = ({
 function IconContainer({
   mouseX,
   title,
-  icon,
+  src,
   href,
 }: {
   mouseX: MotionValue;
   title: string;
-  icon: React.ReactNode;
+  src: string;
   href: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
@@ -193,7 +199,7 @@ function IconContainer({
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
         >
-          {icon}
+          <img src={src} alt={title} className="h-full w-full" />
         </motion.div>
       </motion.div>
     </Link>
